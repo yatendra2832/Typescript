@@ -18,6 +18,7 @@ function createCourse():{name:string , price:number}{
 */
 /******************************************************** */
 // TYPE ALIASES
+/*
 type User={
     name:string,
     email:string,
@@ -36,6 +37,32 @@ const newUser: User = {
 }
 
 createUser(newUser);
+*/
+// READONLY and OPTIONAL
+// readonly will make the thing only readable not editable
+
+type User={
+   readonly _id:string 
+    name:string
+    email:string
+    isActive:boolean
+    creditCardDetails ? :number
+}
+
+let myUser: User ={
+    _id:"1234rfd23",
+    name:"Yatendra Singh",
+    email:"yatendrayadav2832@gmail.com",
+    isActive:true
+}
+console.log(myUser.email)
+myUser.email="yatendrasingh465@gmail.com"
+console.log(myUser.email)
+
+// myUser._id="enbsadb21e23"// that is not possible as _id is marked as readonly attribute
+// ? -> that is used for optional parameter where it is not compulsory to fill this field
+// function createUser(u:User){}
+
 
 
 
